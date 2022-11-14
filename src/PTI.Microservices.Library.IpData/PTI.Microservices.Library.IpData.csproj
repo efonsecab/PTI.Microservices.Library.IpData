@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Authors>Eduardo Fonseca B.</Authors>
+		<Company>PTI Costa Rica</Company>
+		<Copyright>PTI Costa Rica</Copyright>
+		<Description>Allows you to interact with IpData easily</Description>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<Version>7.0.0.1</Version>
+		<PackageProjectUrl>https://github.com/efonsecab/PTI.Microservices.Library.IpData</PackageProjectUrl>
+		<AnalysisLevel>latest</AnalysisLevel>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+		<PackageLicenseFile>License.txt</PackageLicenseFile>
+		<GenerateDocumentationFile>False</GenerateDocumentationFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/efonsecab/PTI.Microservices.Library.IpData</RepositoryUrl>
+		<IncludeSymbols>True</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	  <WarningLevel>5</WarningLevel>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+	  <WarningLevel>5</WarningLevel>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="PTI.Microservices.Library.Core" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="License.txt">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="README.md">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+</Project>
